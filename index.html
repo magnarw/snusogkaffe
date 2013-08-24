@@ -6,6 +6,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="css/main.css" rel="stylesheet" media="screen">
     <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+   <link rel="stylesheet" href="build/mediaelementplayer.min.css" />
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -33,6 +34,10 @@
               <li><a href="#contact">Itunes</a></li>
               <li><a href="#contact">RSS</a></li>
             </ul>
+             <div class="nav navbar-nav navbar-right">
+                  <audio id="player2" src="../media/AirReview-Landmarks-02-ChasingCorporate.mp3" type="audio/mp3" controls="controls">   
+                  </audio>
+              </div>
           </div><!--/.nav-collapse -->
         </div>
      </div>
@@ -113,5 +118,10 @@
     <script src="js/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="build/mediaelement-and-player.min.js"></script>
+    <script>
+      // jQuery method
+      $('audio').mediaelementplayer();
+    </script>
   </body>
 </html>
