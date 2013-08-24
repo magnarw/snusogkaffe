@@ -1,0 +1,65 @@
+
+
+.row {
+margin-top: 50px;
+}
+
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 60px;
+
+  /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
+  margin-top: 50px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 500px;
+  width: 100%;
+  background-color: #777;
+}
+
+.carousel-caption h1 {
+  font-family: oswald, sans-serif;
+  background: black;
+  /* TODO : make responsive */
+  font-size: 60px;
+  color: white;
+  text-transform:uppercase;
+  display: inline-block;
+}
+
+#ingress {
+  font-family: oswald, sans-serif;
+  background: black;
+  color: white;
+  text-transform:uppercase;
+  display: inline-block;
+}
+
+.mainarticle h1 {
+  font-family: oswald, sans-serif;
+}
+
+
+.mainarticle {
+  font-family: oswald, sans-serif;
+}
+
+
+
+
+#item1 {
+  background: url( ../images/twobrotherspromo.jpg);
+  background-size: cover; 
+}
+
+#item2 {
+  background: url( ../images/fifa.jpg);
+  background-size: cover; 
+}
