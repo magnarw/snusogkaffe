@@ -34,6 +34,16 @@ margin-top: 50px;
   display: inline-block;
 }
 
+.heading {
+  font-family: oswald, sans-serif;
+  background: black;
+  /* TODO : make responsive */
+  font-size: 60px;
+  color: white;
+  text-transform:uppercase;
+  display: inline-block;
+}
+
 #ingress {
   font-family: oswald, sans-serif;
   background: black;
@@ -42,15 +52,26 @@ margin-top: 50px;
   display: inline-block;
 }
 
-.mainarticle h1 {
-  font-family: oswald, sans-serif;
+.download {
+  display: block;
+  margin-top:5px;
 }
 
-
-.mainarticle {
-  font-family: oswald, sans-serif;
+a:link    {
+  /* Applies to all unvisited links */
+  text-decoration:  none;
+  color:            black;
+  } 
+a:visited {
+  /* Applies to all visited links */
+  text-decoration:  none;
+  color:            black;
+  } 
+a:hover
+{
+color:grey;
+text-decoration: none;
 }
-
 
 
 
@@ -63,3 +84,5 @@ margin-top: 50px;
   background: url( ../images/fifa.jpg);
   background-size: cover; 
 }
+
+
