@@ -112,10 +112,11 @@ filter: alpha(opacity=100);
 .feeds {
 
   list-style-type: none;
-  padding-left: 15px;
+  padding-left: 0px;
 }
 
 
 .feeds li {
   margin-top: 20px;
+  float: left;
 }
