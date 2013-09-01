@@ -6,6 +6,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="css/main.css" rel="stylesheet" media="screen">
     <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+     <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
   
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -15,7 +16,28 @@
     <![endif]-->
   </head>
   <body>
-      
+    <div id="fb-root"></div>
+  <script>
+    window.fbAsyncInit = function() {
+      // init the FB JS SDK
+      FB.init({
+        appId      : '381910605267888',                        // App ID from the app dashboard
+        status     : true,                                 // Check Facebook Login status
+        xfbml      : true                                  // Look for social plugins on the page
+      });
+
+      // Additional initialization code such as adding Event Listeners goes here
+    };
+
+    // Load the SDK asynchronously
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_US/all.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+  </script>
    <div class="navbar navbar-default navbar-fixed-top">
         <div class="container">
           <div class="navbar-header">
@@ -67,42 +89,55 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-md-10">
-           <div class="row"> 
-                <div class="col-md-12 mainarticle">
-                   <img src="images/inspector2.jpg" alt="Smiley face" height="368" width="620"/>
-                   <h1>Mord til dessert</h1>
-                   <p>
-                    En lys luggetherre kommer inn i en dunkel pub
-                   </p>
-                </div>
-           </div>
-            <div class="row"> 
-                <div class="col-md-5 mainarticle">
-                   <img src="images/snus.jpg" alt="Smiley face" height="184" width="310">
-                   <h1>Topp 5 porsjon</h1>
-                   <p>
-                      Gorm tester snus
-                   </p>
-                </div>
-                <div class="col-md-5 mainarticle">
-                   <img src="images/birddemic.jpg" alt="Smiley face" height="242" width="429">
-                   <h1>Birdemic</h1>
-                   <p>
-                      Verdenes verste film?
-                   </p>
-                </div>
-           </div>
+         <div class="col-md-9 mainarticle">
+          <div class="row">
+              <div class="col-md-9 mainarticle">
+                   <img src="images/snuslagre.jpg" alt="Smiley face" height="311" width="608"/>
+                   <div class="social">
+                       <a href="https://twitter.com/share?text=Ny episode av snus og kaffe: snusogkaffe.net/episoder!" class="twitter-share-button" data-lang="en">Tweet</a>
+                      <div class="fb-like" data-href="http://www.telesherpa.net/~ubuntu/newsite/home.html" data-width="300" data-layout="button_count" data-show-faces="false" data-send="false"></div>
+                   </div>
+                    <h3>Blanke ark og Web 2.0</h3>
+                    <p>
+                       <small>Publisert 1 September 2013 av Snus og kaffe</small>
+                     </p>
+                     <div class="collapse in" id="ep1">  
+                        <p>
+                            I tråd med med våre nye kjerneverdier lanserer vi en ny webside. 
+                            Vi satser på på holde denne oppdatert med ferske epsioder. 
+
+                        </p>
+                     </div>   
+            </div>
+          </div>        
         </div>
-        <div class="col-md-2">
-          <h4>OM SNUS OG KAFFE</h4>
-          <p>
-            Snus og kaffe er podcast laget av en gjeng glade amatører. Vi fyller sendingene med det som interesserer oss: spill, film og alt som beveger innenfor popkulturen. På denne siden vil vi legge ut episodene fortløpende og vil også blogge om stort og smått.
-          </p>
-          <p>
-            Har du innspill, ros eller ris, kontakt oss på
-            snusogkaffe@gmail.com
-          <p>
+        <div class="col-md-3">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="container">
+            <h4>OM SNUS OG KAFFE</h4>
+            <p>
+              Snus og kaffe er podcast laget av en gjeng glade amatører. Vi fyller sendingene med det som interesserer oss: spill, film og alt som beveger innenfor popkulturen. På denne siden vil vi legge ut episodene fortløpende og vil også blogge om stort og smått.
+            </p>
+            <p>
+              Har du innspill, ros eller ris, kontakt oss på
+              snusogkaffe@gmail.com
+            </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+              <div class="container">
+            <h4>ABONNER</h4>
+             <ul class="feeds">
+              <li><img src="images/podcast.jpg" alt="Smiley face" height="60" width="60"/></li>
+              <li><img src="images/rss_feed_icon_high_res.gif" alt="Smiley face" height="50" width="50"/></li>
+             </ul>
+            </div>
+          </div>
+        </div>
+
         </div>
       </div>
     </div>
@@ -115,20 +150,8 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 
-    <script src="js/jquery.jplayer.min.js"></script>
+  
 
-    <script type="text/javascript">
-     $(document).ready(function(){
-      $("#jquery_jplayer_1").jPlayer({
-       ready: function () {
-        $(this).jPlayer("setMedia", {
-         mp3: "media/Episode 6.mp3"
-        });
-       },
-       swfPath: "/js",
-       supplied: "mp3"
-      });
-     });
-  </script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
   </body>
 </html>
