@@ -142,7 +142,7 @@ filter: alpha(opacity=100);
 ==== Content Area ====
 */
 .container img {
-  max-width: 100%;
+  margin-bottom: 10px;
 }
 .sk-content {
   margin-top: 75px;
@@ -153,7 +153,7 @@ h1.section-header {
   position: relative;
 }
 img.content-image {
-  margin-bottom: 10px;
+  max-width: 100%;
 }
 
 /*
