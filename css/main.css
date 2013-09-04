@@ -141,7 +141,7 @@ filter: alpha(opacity=100);
 /*
 ==== Content Area ====
 */
-.container img {
+.sk-content img {
   margin-bottom: 10px;
 }
 .sk-content {
