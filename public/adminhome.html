@@ -1,0 +1,37 @@
+<html ng-app="myApp">
+<head>
+	<title>Bootstrap 101 Template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="css/main.css" rel="stylesheet" media="screen">
+	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	</head>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<ul class="nav nav-pills nav-stacked">
+			 		<li class="active"><a href="#/episodes">Legg til episode</a></li>
+			 		<li><a href="#">Stats</a></li>
+				</ul>
+			</div>
+			<div class="col-md-8">
+				 <div ng-view></div>
+			</div>
+		</div>
+	</div>
+
+	<body>
+		<script src="lib/angluar/angular.js"></script>
+	    <script src="lib/jquery/jquery-2.0.3.min.js"></script>
+	    <script src="lib/bootstrap/bootstrap.min.js"></script>
+	    <script src="js/app.js"></script>
+	    <script src="js/controllers.js"></script>
+	    <script src="js/directives.js"></script>
+	    <script src="js/filters.js"></script>
+	    <script src="js/services.js"></script>
+	</body>
+
+
+</html>
