@@ -23,12 +23,6 @@ function MyCtrl1($scope, $http) {
     $scope.name = 'Error!'
   });
 
-
-  $scope.templates = [
-        {
-        name: 'start',
-        url: 'partials/MyTemplate.jade'}
-    ];
 }
 
 function MyCtrl2() {

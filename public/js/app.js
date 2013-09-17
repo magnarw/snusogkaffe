@@ -4,6 +4,7 @@
 // Declare app level module which depends on filters, and services
 angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives']).
   config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
-    $routeProvider.when("/episodes", {templateUrl: "views/episodes.html", controller: MyCtrl1});
+    $routeProvider.when("/episodes", {templateUrl: "views/test.html", controller: MyCtrl1});
+    $routeProvider.when("/tests", {templateUrl: "views/test2.html", controller: MyCtrl1});
     //$locationProvider.html5Mode(true);
   }]);

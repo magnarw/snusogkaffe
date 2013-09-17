@@ -9,6 +9,23 @@ body {
   margin-top: 40px;
 }
 
+.phone:before {
+    content:"☎";
+    font-size: 20px;
+    margin-right: 0.5em;
+}
+
+.phone {
+    border-bottom: dashed 1px; 
+    display: inline-block;
+    font-size: 20px;
+    word-wrap: normal;
+    margin-top: 25px;
+}
+.phone:hover {
+    color : grey;
+}
+
 /*
 ==== Header - Navbar ====
 */
