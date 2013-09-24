@@ -1,9 +1,11 @@
 'use strict';
 
-/* Services */
-
-
-// Demonstrate how to register services
-// In this case it is a simple value service.
-angular.module('myApp.services', []).
-  value('version', '0.1');
+angular.module('episodeService', ['ngResource']).
+    factory('Episode', function($resource){
+   return $resource('http://localhost\\:3000/api/episodes/:episodeId', {}, {
+	 	 query: {method:'GET', params:{episodeId:''}, isArray:true},	
+		  post: {method:'POST'},
+		  update: {method:'PUT', params: {episodeId: '@episodeId'}},
+		  remove: {method:'DELETE'}
+  });
+});

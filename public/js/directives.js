@@ -3,29 +3,27 @@
 /* Directives */
 
 
-var directives = module('myApp.directives', []);
+var directives = angular.module('myApp.directives', []);
 
 
-directives.directive('inlineEdit', function() {
-	return{
-		restrict: 'A',
-		transclude: true,
-		template: '<label class="editing" data-ng-transclude></label>',
-		controller: ['$scope','$element','$transclude',function($scope, $element, $transclude) {
-			$transclude(function(clone) {
-				$scope.transcluded_content = clone[0].textContent;
+directives.directive('searchField', function () {
+	return {
+		restrict : 'A',
+		template : '<div contentEditable="true" ng-model="currenttrem"></div><span ng-repeat="term in searchterms">{{term.value}}</span>',
+		link : function (scope, element, attrs) {
+			scope.searchterms = [];
+			scope.currenttrem = "test";
+			$(element).keypress(function (e) {
+			  if (e.which == 13) {			
+			    scope.searchterms.push({"value" : scope.currenttrem});
+			    scope.currenttrem = "";
+			   // this.textContent = "";
+			    scope.$apply();
+			    return false;    //<---- Add this line
+			  }
 			});
-			$element.bind('click', function(){
-				$element.hide().after('<input type="text" value="'+$scope.transcluded_content+'" />');
-                
-				$element.next().focus().blur(function (){
-					$scope.transcluded_content = $element.next().val();
-					$element.html($scope.transcluded_content);
-					$element.next().hide();
-					$element.show();
-				});
-			});
-			
-		}]
-	};
+		}
+	}
 });
+
+

@@ -9,6 +9,10 @@ body {
   margin-top: 40px;
 }
 
+.adminrow {
+  margin-top: 80px;
+}
+
 .phone:before {
     content:"☎";
     font-size: 20px;

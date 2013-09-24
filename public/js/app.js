@@ -2,9 +2,9 @@
 
 
 // Declare app level module which depends on filters, and services
-angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives']).
+angular.module('myApp', ['myApp.filters','episodeService','ngResource','ui.bootstrap', 'myApp.directives']).
   config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
-    $routeProvider.when("/episodes", {templateUrl: "views/test.html", controller: MyCtrl1});
-    $routeProvider.when("/tests", {templateUrl: "views/test2.html", controller: MyCtrl1});
+    $routeProvider.when("/episodes", {templateUrl: "views/adminepisodes.html", controller: AdminEpisodeCtrl});
+    $routeProvider.when("/tests", {templateUrl: "views/test2.html", controller: AdminEpisodeCtrl});
     //$locationProvider.html5Mode(true);
   }]);
